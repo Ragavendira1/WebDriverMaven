@@ -3,6 +3,7 @@ package Testng;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -16,9 +17,9 @@ public class Simple_Login {
 	@BeforeClass(description="Launching Firefox Driver")
 	public void setup()
 	{
-		driver = new FirefoxDriver();
-		//System.setProperty("webdriver.chrome.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\chromedriver\\chromedriver.exe");
-		//driver = new ChromeDriver();
+		//driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\chromedriver\\chromedriver.exe");
+		driver = new ChromeDriver();
 		//System.setProperty("webdriver.ie.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\IEDriverServer.exe");
 		//driver = new InternetExplorerDriver();
 		
@@ -29,7 +30,7 @@ public class Simple_Login {
 	@Test(description="Launch The-Internet site",priority=1)
 		public void simple_login()
 	{
-	driver.get("http://the-internet.herokuapp.com//login");
+	driver.get("http://the-internet.herokuapp.com/login");
 	driver.manage().window().maximize();
 	System.out.println("Maximizing Browser");
 	}
