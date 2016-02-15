@@ -17,9 +17,9 @@ public class Simple_Login {
 	@BeforeClass(description="Launching Firefox Driver")
 	public void setup()
 	{
-		//driver = new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
+		//System.setProperty("webdriver.chrome.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\chromedriver\\chromedriver.exe");
+		//driver = new ChromeDriver();
 		//System.setProperty("webdriver.ie.driver", "D:\\SeleniumTraining\\SeleniumSoftwares\\IEDriverServer.exe");
 		//driver = new InternetExplorerDriver();
 		
